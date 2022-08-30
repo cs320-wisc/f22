@@ -1,0 +1,50 @@
+#
+
+```python
+exception_types = []
+
+# error 1
+try:
+    x = 1 / 0
+except Exception as ex:
+    exception_types.append(type(ex))
+    
+# error 2
+try:
+    pass # TODO
+except Exception as ex:
+    exception_types.append(type(ex))
+    
+# error 3
+try:
+    pass # TODO
+except Exception as ex:
+    exception_types.append(type(ex))
+    
+# error 4
+try:
+    pass # TODO
+except Exception as ex:
+    exception_types.append(type(ex))
+    
+# error 5
+try:
+    pass # TODO
+except Exception as ex:
+    exception_types.append(type(ex))
+    
+# error 6
+try:
+    pass # TODO
+except Exception as ex:
+    exception_types.append(type(ex))
+    
+# error 7
+try:
+    pass # TODO
+except Exception as ex:
+    exception_types.append(type(ex))
+
+print(f"You have found {len(set(exception_types))} out of 7 required")
+exception_types
+```

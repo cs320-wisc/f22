@@ -1,7 +1,7 @@
 # Creating Your Virtual Machine
 
 The lectures, instructions, and projects for this course are designed
-for the Linux operating system (*Ubuntu 20.04 LTS Linux*, to be
+for the Linux operating system (*Ubuntu 22.04 LTS Linux*, to be
 precise -- there are many flavors/versions!).
 
 Rather than replace Windows or Mac OS X on your computer, it will be
@@ -21,7 +21,7 @@ semester.
 
 We provide directions for two major cloud providers: GCP (Google's
 cloud) and Azure (Microsoft's cloud).  If you want to find another
-way/place to use Ubuntu 20.04 LTS and install Jupyter, that's fine
+way/place to use Ubuntu 22.04 LTS and install Jupyter, that's fine
 too, and you can skip this lab (though we will only support the first
 two options during office hours).
 
@@ -34,4 +34,5 @@ is the preferred option.
 2. [Azure Directions](azure/README.md).  At the time these directions
 were written, Microsoft offers students $100/year of credit per year.
 You can use this if there is an issue with option 1 (or you somehow
-run out of the $50 of credits before the end of the year).
+run out of the $50 of credits before the end of the year).  These
+directions might be a bit stale.

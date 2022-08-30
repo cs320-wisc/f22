@@ -16,9 +16,11 @@ course of the semester.
 4. Select "Ubuntu" for the operating system.  Ubuntu is a popular
 version of Linux (choosing a popular one is good because it's easier
 to search for useful online suggestions when things go amiss).  Choose
-"Ubuntu 20.04 LTS" for the version.  "LTS" stands for "Long Term
-Support".  LTS versions aren't generally the most recent version, but
-they're generally more reliable.  Update your boot disk to use 15 GB.
+"Ubuntu 22.04 LTS" for the version (there are two options that say
+this -- choose the one that says "x86/64" as a subtitle).  "LTS"
+stands for "Long Term Support".  LTS versions aren't generally the
+most recent version, but they're generally more reliable.  Update your
+boot disk to use 15 GB.
 
 <img src="img/21.png" width=600>
 

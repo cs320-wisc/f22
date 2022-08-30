@@ -2,7 +2,7 @@
 
 # Lab 2
 
-1. find your group.  You can start by visiting here to determine your group number: https://tyler.caraza-harter.com/cs320/f21/messages.html?topic=group.  Ask a TA/mentor if you need help finding your group members.
+1. find your group.  You can start by visiting here to determine your group number: https://tyler.caraza-harter.com/cs320/f22/messages.html?topic=group.  Ask a TA/mentor if you need help finding your group members.
 
 2. get to know your group members, asking each other the following (*):
 

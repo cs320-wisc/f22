@@ -2,7 +2,7 @@
 
 1. Connect via SSH (or the Google Cloud Console) to your virtual machine.
 
-2. Before we install Jupyter, let's get pip.  Run the following, and enter "Y" when prompted:
+2. Before we install Jupyter, let's get pip.  Run the following:
 
 Please run the commands one at a time so if an error occurs, you are able to catch it. 
 
@@ -11,6 +11,13 @@ Please run the commands one at a time so if an error occurs, you are able to cat
 - `sudo apt upgrade`
 
 - `sudo apt install python3-pip`
+
+If prompted, enter "Y" (for yes) when prompted.  If you're using an
+international keyboard, be careful about what mode you're typing in --
+we've heard that sometimes a character that looks like a "Y" to a
+human isn't recognized by the installer.  If prompted about services (as below), just hit the ENTER key to accept the recommendation:
+
+<img src="img/28.png" width=400>
 
 The `apt` program lets you install software on an Ubuntu system; think
 of it like `pip`, for more general (you can install stuff not related
@@ -21,7 +28,7 @@ installing tools and other tasks.
 
 3. Now let's use pip3 to install Jupyter (don't use sudo for this one):
 
-`pip3 install jupyter==1.0.0`
+`pip3 install jupyterlab==3.4.5`
 
 4. When you start Jupyter notebook remotely, you'll want to set a
 password for connecting to it.  Make it a good one, or anybody will be
@@ -31,7 +38,7 @@ are still registering; the terminal just isn't displaying them!)
 Run the following:
 
 ```
-python3 -m notebook password
+python3 -m jupyterlab password
 ```
 
 **Important!** Choose a strong password.  Anybody on the Internet can
@@ -40,7 +47,7 @@ python3 -m notebook password
 
 5. Now let's start Jupyter.  Run the following:
 
-`nohup python3 -m notebook --no-browser --ip=0.0.0.0 --port=2020`
+`nohup python3 -m jupyterlab --no-browser --ip=0.0.0.0 --port=2020`
 
 6. Now, open up a new browser window, and type `IP:2020` for the URL
 (IP should be the External IP of the virtual machine).  You can enter

@@ -1,5 +1,3 @@
-# DRAFT!  Don't start yet.
-
 # Lab 2
 
 1. find your group.  You can start by visiting here to determine your group number: https://tyler.caraza-harter.com/cs320/f22/messages.html?topic=group.  Ask a TA/mentor if you need help finding your group members.
@@ -12,6 +10,6 @@
 
 3. setup your [virtual machine](./vm)
 
-4. remember to fill the attendence form: https://tyler.caraza-harter.com/cs320/s22/surveys.html
+4. remember that each study group member should fill TopHat question: https://app.tophat.com/e/594996
 
 \* 320 ice breakers borrowed from [here](https://www.signupgenius.com/college/icebreaker-questions-college-students.cfm).

@@ -2,7 +2,7 @@
 
 ## Step 1: Create Account and Redeem Credits
 
-See details about how to get the $50 credit: https://canvas.wisc.edu/courses/293982/discussion_topics/1207412.
+See details about how to get the $50 credit: https://canvas.wisc.edu/courses/322105/discussion_topics/1345359.
 
 Then follow [these instructions](gcp.md) to create an account and redeem the credit.
 
@@ -47,4 +47,3 @@ directions](connect-alt.md) instead.
 
 Now lets get Jupyter and some other software installed.  Follow [these
 directions](jupyter.md).
-

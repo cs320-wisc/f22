@@ -20,7 +20,7 @@ Learning objectives:
 
 **Note:** some browser's have a "dark mode" -- be careful not to use it when looking at plot examples (it often hides axis labels in the examples, which you need for full credit).
 
-[VIDEO](https://mediaspace.wisc.edu/media/CS%20320%20Project%201%3A%20Tips%20for%20Getting%20Started/1_gw0nxldd) showing how to get started (assumes you have completed lab 2).  This was recorded in Fall 2021, but still applies to the project this semester.
+[VIDEO](https://mediaspace.wisc.edu/media/t/1_h3ej7cu2) showing how to get started (assumes you have completed lab 2).  This was recorded in Fall 2021, but still applies to the project this semester.
 
 ## Setup
 

@@ -28,7 +28,7 @@ installing tools and other tasks.
 
 3. Now let's use pip3 to install Jupyter (don't use sudo for this one):
 
-`pip3 install jupyterlab==3.4.5`
+`pip3 install jupyterlab==3.4.5 MarkupSafe==2.0.1`
 
 4. When you start Jupyter notebook remotely, you'll want to set a
 password for connecting to it.  Make it a good one, or anybody will be

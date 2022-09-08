@@ -13,7 +13,7 @@ connecting (yes/no/[fingerprint])?"  You can type "yes".
 
 If the ssh connection works, run `lsb_release -a`.  If all is well, it
 should show you what version of Ubuntu you're running (hopefully
-20.04).  It should look something like this:
+22.04).  It should look something like this:
 
 <img src="img/25.png" width=600>
 

@@ -6,7 +6,7 @@ In the table of VM instances, click the arrow by "SSH" in the row for your virtu
 
 When the window finally opens, run `lsb_release -a`.  If all is well,
 it should show you what version of Ubuntu you're running (hopefully
-20.04).  It should look something like this:
+22.04).  It should look something like this:
 
 <img src="img/24.png" width=600>
 

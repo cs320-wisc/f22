@@ -6,7 +6,7 @@
 
 2. Use your "@wisc.edu" email address.
 
-3. Continue through any remaining steps to create an account
+3. Continue through any remaining steps to create an account.  Sometimes you'll be prompted to enter a credit card -- if that happens, you should be able to move on to the next steps where you redeem the coupon code (it seems enough of the account is created prior to the credit card prompt for you to redeem the coupon and proceed).
 
 4. look for the Canvas announcement about how to get a free $50 coupon code
 

@@ -547,7 +547,7 @@ t1 = time()
 
 Your plot should look something like this (we're hiding the legend labels so it's a surprise for you which is faster).
 
-<img src="imgs/q30.png">
+<img src="img/q30.png">
 
 Some noise is OK as long as you get the same general shape (we get a slightly different plot each time we measure ourselves).
 

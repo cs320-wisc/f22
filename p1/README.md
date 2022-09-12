@@ -2,7 +2,7 @@
 
 ## Corrections/Clarifications
 
-* none yet
+* Q26: Change 20 earliest commits to 50 earliest commits to match solution
 
 ## Overview
 
@@ -436,7 +436,7 @@ If you pass `cwd="????"` to `check_output`, you can run the `git log` command in
 
 **Important:** if you use "git checkout" commands (as required for following exercises) to switch the current (HEAD) commit, the output of "git log" will change (it will show the current commit and prior ones, but not future commits).  You may want to add some code that runs "git checkout main" to bring the HEAD back to the latest commit.  Otherwise your answer to this question might only be correct the first time you run the notebook.
 
-### Q26: What are the commit numbers of the 20 earliest commits?
+### Q26: What are the commit numbers of the 50 earliest commits?
 
 Answer with a list.  Commits with earlier dates should be later in the list.
 

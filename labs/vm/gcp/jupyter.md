@@ -47,7 +47,9 @@ python3 -m jupyterlab password
 
 5. Now let's start Jupyter.  Run the following:
 
-`nohup python3 -m jupyterlab --no-browser --ip=0.0.0.0 --port=2020`
+`nohup python3 -m jupyterlab --no-browser --ip=0.0.0.0 --port=2020 &`
+
+You can now close the terminal window.
 
 6. Now, open up a new browser window, and type `IP:2020` for the URL
 (IP should be the External IP of the virtual machine).  You can enter

@@ -45,6 +45,10 @@ console.
 
 4. go to `http://YOUR_IP_ADDRESS:2020/` in the browser (sign in, if prompted)
 
+Jupyter should still be running from when you started it during lab, but if it's not, you can start it again with the following:
+
+`nohup python3 -m jupyterlab --no-browser --ip=0.0.0.0 --port=2020 &`
+
 5. enter the `f22` > `p1` directory (expand the folder icon on the left of the screen if you don't see these directories)
 
 6. click to create a new `Python 3 (ipykernel)` notebook

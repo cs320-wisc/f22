@@ -3,6 +3,7 @@
 ## Corrections/Clarifications
 
 * Q26: Change 20 earliest commits to 50 earliest commits to match solution
+* 9/15: fix typo (apt => unzip)
 
 ## Overview
 
@@ -432,7 +433,7 @@ For this part, you'll do two things:
 1. analyze the history of this project: https://github.com/pallets/flask.  We'll eventually learn how to use the flask module to build web applications -- for now we'll just analyze changes to the codebase over time.
 2. measure how long various Pandas operations take
 
-We have a copy of the flask repo in `flask.zip`.  Run `unzip flask.zip`.  If `apt` is not installed, follow the suggestion in the error message to install it.  If that doesn't work because you don't have admin permissions, re-run the suggested command with `sudo` in front of the suggestion (that runs the command as the super/root/admin user).
+We have a copy of the flask repo in `flask.zip`.  Run `unzip flask.zip`.  If `unzip` is not installed, follow the suggestion in the error message to install it.  If that doesn't work because you don't have admin permissions, re-run the suggested command with `sudo` in front of the suggestion (that runs the command as the super/root/admin user).
 
 ### Q25: what is the first line of output from `git log` when run in the `flask` repo directory?
 

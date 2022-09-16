@@ -2,7 +2,7 @@
 
 1. In an SSH session, run `export EDITOR=nano` so that `nano` is your default editor for the following practice.
 
-2. Clone the directory first (run `git clone https://github.com/cs320-wisc/s22.git`). If you have already cloned it, run `git pull` to update the directory.
+2. Clone the directory first (run `git clone https://github.com/cs320-wisc/f22.git`). If you have already cloned it, run `git pull` to update the directory.
 
 3. navigate (with `cd`) to `labs/git-conflict` within the semester repo.  Run `unzip repo.zip` to create a `repo` directory, which contains an `adder.py` program. (If you cannot run `unzip` correctly, try to install unzip by running `sudo apt install unzip`.)
 
@@ -20,7 +20,7 @@
 
 * the first merge you do will be easiest, because it is a roll forward merge.  Each of the three branches share a common history with `main`, so `main` can just catch up with the latest commits
 * the changes on the `docs` branch are on a separate file (README.txt), so that will never conflict with the other changes
-* there will be a conflict once you've tried to merge both `args` and `func-rename`.  Resolve it.
+* there will be a conflict once you've tried to merge both `args` and `func-rename`.  Resolve it like we did in class.
 
 **Conflict resolution hints:**
 

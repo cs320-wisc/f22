@@ -50,23 +50,44 @@ Consider a concrete example of how to use all these commands.  Say you find a bu
 7. do a pull request from your fork to the main pandas repo
 8. somebody in charge of main repo will consider your changes, and probably (a) click a button on GitHub to incorporate your changes, or (b) give you feedback to make the code better first, in which case you go back to step 4
 
-## Step 2: Create GitHub Account
+## Step 1: Create GitHub Account
 
 Go to http://github.com/ and create a GitHub account (choose a name
 that wouldn't embarrass you on a resume):
 
 <img src="1.png" width=600>
 
-Later, running certain git commands will make you type your GitHub
-password each time, unless you setup an SSH key to use instead of a
-password (you likely setup an SSH key during the first lab to access
-your virtual machine).  It's recommended (but not required) that you
-configure GitHub with an SSH key following [these directions](ssh.md).
-
-**Important:** for participation credit, fill [this form](https://forms.gle/BiyfdLRjuGmgcz2t8) so that we know you
+**Important:** for participation credit, fill [this form](https://forms.gle/iKGPVd4o1tPtPcyx6) so that we know you
   completed this part.  Associating your GitHub name with your
   @wisc.edu user will also let us give you credit for pull requests
   you might make to improve the course.
+
+## Step 2: SSH Keys
+
+These steps are similar to the previous lab.  There, we created SSH keys
+on your laptop, allowing you to connect laptop=>VM.  Now, we're
+creating SSH keys on your VM, allowing you to connect VM=>GitHub.
+
+Connect via SSH to your VM.
+
+Run `ssh-keygen` on your VM and repeatedly hitting `ENTER` to accept
+all the defaults (including an empty password).
+
+Run the following and **copy** the output:
+
+```
+cat ~/.ssh/id_rsa.pub
+```
+
+Go to https://github.com/settings/keys and click "New SSH key".
+
+Name the key "cs320-vm" (or whatever you like, really) and past the
+contents of `id_rsa.pub` to the "Key" box, as in the following
+screenshot:
+
+<img src="./10.png" width=600>
+
+Click "Add SSH Key" to finish adding it.
 
 ## Step 3: Create a Repo
 
@@ -81,6 +102,8 @@ you'll see something like this:
 
 <img src="3.png" width=600>
 
+Click the **SSH** button.
+
 Copy the commands in the "create a new repository box".  We want to run those in a new directory on your computer.  So run this in the terminal:
 
 ```
@@ -88,18 +111,21 @@ mkdir cs320-lab2
 cd cs320-lab2
 ```
 
-Then paste and run what you copied from GitHub. Enter your git username/password as necessary. If you are prompted to configure your github account on the VM after trying to commit, please do so. For example, you might need to: 
+Then paste and run what you copied from GitHub.  You shouldn't be
+asked for a password (if so, double check you did the parts of step
+2+3 related to SSH correctly).  If you see "Are you sure you want to
+continue connecting?", type "yes" and ENTER.
 
-1. Set Git username and email if prompted:
+If prompted, you can configure your username/email:
+
 ```
 git config --global user.name "your_github_username"
 git config --global user.email "your_email"
 ```
-2. If you are using HTTPS url instead of SSH, [create token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and use it when prompted to enter password.
 
 <img src="4.png" width=600>
 
-Make sure there are no errors - you configured git if prompted, created commit and pushed it. Refresh the GitHub page for your repo at
+Refresh the GitHub page for your repo at
 https://github.com/tylerharter/cs320-lab2 (with your username instead
 of "tylerharter").  You should now see the first commit, and the
 content of your README.md:
@@ -118,7 +144,9 @@ git commit -m 'say hello'
 git push
 ```
 
-Keep in mind nano is a text editor. Do control-O to write the file. 
+Keep in mind `nano` is an in-terminal text editor so you can only use
+keyboard shortcuts (not the mouse). Do control-O to write the file.
+"^" means CONTROL, and the bottom of the screen should provide hints.
 
 ## Step 4: Pull Request
 
@@ -132,8 +160,8 @@ changes to it via a git push.  Instead, if you think there should be a
 change to a site (like the one above), the process goes like this:
 
 1. make a copy of the GitHub repo, called a "fork", from the original account to your own account
-2. download a copy of the original GitHub repo to your laptop or VM, using the clone command
-3. make changes on your laptop or VM
+2. download a copy of the original GitHub repo to your VM, using the clone command
+3. make changes on your VM
 4. push those changes to your own fork
 5. make a formal request, called a "pull request", for the person of the original repo to integrate the changes on your fork into their codebase
 
@@ -168,10 +196,7 @@ Go to your newly forked repo, which is still named "cs320-lab2-datasets" like th
 
 <img src="8.png" width=600>
 
-Under the "Code" dropdown, **copy the address again**.  But instead of
-cloning this as a new repo on your laptop or VM, we'll link it with the repo
-on your laptop or VM that you got early by cloning the original repo from
-GitHub repo.
+Under the "Code" dropdown, copy the **SSH address** for the repo from the gray box.
 
 Now, go back to the terminal, in the directory where you cloned the original repo.
 Run `git remote -v`, and you'll see something like this:
@@ -187,21 +212,21 @@ remote called "mycopy" that refers to your own forked repo on GitHub.
 Run this, replacing "your-account" with your own GitHub name:
 
 ```
-git remote add mycopy https://github.com/your-account/cs320-lab2-datasets.git
+git remote add mycopy git@github.com:your-account/cs320-lab2-datasets.git
 git remote -v
 ```
 
 You'll see something like this:
 
 ```
-mycopy	https://github.com/your-account/cs320-lab2-datasets.git (fetch)
-mycopy	https://github.com/your-account/cs320-lab2-datasets.git (push)
+mycopy	git@github.com:your-account/cs320-lab2-datasets.git (fetch)
+mycopy	git@github.com:your-account/cs320-lab2-datasets.git (push)
 origin	https://github.com/tylerharter/cs320-lab2-datasets.git (fetch)
 origin	https://github.com/tylerharter/cs320-lab2-datasets.git (push)
 ```
 
-Now, if you want to sync the last commit you made from the main branch
-on your laptop/VM to GitHub, you have two choices:
+Now, if you want to sync the last commit you made on the main branch
+on your VM to GitHub, you have two choices:
 
 1. `git push origin main` (push your changes to the original repo -- in this case, it will fail because I haven't added you as a "collaborator" to my repo)
 2. `git push mycopy main` (push your changes in the main branch on your laptop or VM to your forked copy on GitHub)

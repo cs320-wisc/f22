@@ -1,5 +1,3 @@
-# DRAFT!  Don't start yet.
-
 # Lab 3: Git
 
 Activities:
@@ -11,3 +9,5 @@ Activities:
 3. try [merging branches](./git-conflict) and conflict resolution
 
 4. create a GitHub account and learn how to create a [pull request](./git-pr) to suggest changes to repos on GitHub that you don't own
+
+5. remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996

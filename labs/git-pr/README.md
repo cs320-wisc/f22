@@ -123,8 +123,6 @@ git config --global user.name "your_github_username"
 git config --global user.email "your_email"
 ```
 
-<img src="4.png" width=600>
-
 Refresh the GitHub page for your repo at
 https://github.com/tylerharter/cs320-lab2 (with your username instead
 of "tylerharter").  You should now see the first commit, and the

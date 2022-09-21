@@ -76,7 +76,7 @@ anybody outside the course.
 
 ## Part 1: Loan Classes
 
-Finish the `Applicant` and `Loan` classes from lab (if you haven't already done so): https://github.com/cs320-wisc/s22/blob/main/labs/lab4.md
+Finish the `Applicant` and `Loan` classes from lab (if you haven't already done so): https://github.com/cs320-wisc/f22/blob/main/labs/lab4.md
 
 We'll now add a `Bank` class to `loans.py`.  A `Bank` can be created like this (create an class with the necessary constructor for this to work):
 
@@ -161,7 +161,7 @@ aspects.
 
 ## Part 2: Binary Search Tree
 
-Finish the `Node` and `BST` classes from lab (if you haven't already done so): https://github.com/cs320-wisc/s22/blob/main/labs/lab5.md
+Finish the `Node` and `BST` classes from lab (if you haven't already done so): https://github.com/cs320-wisc/f22/blob/main/labs/lab5.md
 
 **Note:** if we haven't gotten to BSTs in lecture and lab yet, you can still work on some of the questions in parts 3 and 4, but you should wait to work on the ones related to trees.
 
@@ -224,10 +224,10 @@ Create a bar plot with two bars:
 
 ### Q8: How many applicants indicate multiple racial identities?
 
-Answer with a bar graph, where the x-axis is number of races, and the y-axis is number of applicants. The y axis should represent the number of applicants with the corresponding x-axis number of race selections.
+Answer with a bar graph, where the y axis should represent the number of applicants with the corresponding x-axis represents number of race selections.
 
 ### Q9: How many leaf nodes are in the tree?
-Write a recursive function or method to count the number of leaf nodes in the given BST.
+Write a recursive function or method to count the number of leaf nodes present in the given BST.
 
 ### Q10: What is the second largest element in the Bank BST?
 Write a recursive function or method to find the second largest element in the BST.

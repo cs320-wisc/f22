@@ -4,6 +4,7 @@
 
 * Q26: Change 20 earliest commits to 50 earliest commits to match solution
 * 9/15: fix typo (apt => unzip)
+* 9/22: Added instructions to Testing section on format of p1.ipynb file
 
 ## Overview
 
@@ -57,6 +58,28 @@ Jupyter should still be running from when you started it during lab, but if it's
 7. Go to "File" > "Rename Notebook", and name your notebook "p1.ipynb"
 
 ## Testing
+
+Your notebook should follow this format to be compatable with the tester:
+
+```python
+# project: p1
+# submitter: ????
+# partner: none
+# hours: ????
+```
+```python
+# all imports
+```
+```python
+#Q1
+some code, output answer
+```
+```python
+#Q2
+some code, output answer
+```
+*Do not include the question or anything else after "#Q__"
+
 
 1. do a "Kernel" > "Restart Kernel & Run All Cells" in your notebook
 

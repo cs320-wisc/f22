@@ -4,13 +4,6 @@
 
 ## Corrections/Clarifications
 
-* Feb 16: until you add some tests of your own to `module_tester.py`, the best score you can get from `module_tester.py` is 90% and the best score you can get from `tester.py` is 95%.
-* Feb 16: added clarification about questions that need to wait until after we cover BSTs in lecture and lab
-* Feb 21: q7 wording corrected
-* Feb 22: q8, clarify limits
-* Feb 22: added note about performance plots
-* Feb 22: BST is needed for Q4
-
 ## Overview
 
 Sadly, there is a long history of lending discrimination based on race
@@ -83,7 +76,7 @@ anybody outside the course.
 
 ## Part 1: Loan Classes
 
-Finish the `Applicant` and `Loan` classes from lab (if you haven't already done so): https://github.com/cs320-wisc/s22/blob/main/labs/lab4.md
+Finish the `Applicant` and `Loan` classes from lab (if you haven't already done so): https://github.com/cs320-wisc/f22/blob/main/labs/lab4.md
 
 We'll now add a `Bank` class to `loans.py`.  A `Bank` can be created like this (create an class with the necessary constructor for this to work):
 
@@ -168,7 +161,7 @@ aspects.
 
 ## Part 2: Binary Search Tree
 
-Finish the `Node` and `BST` classes from lab (if you haven't already done so): https://github.com/cs320-wisc/s22/blob/main/labs/lab5.md
+Finish the `Node` and `BST` classes from lab (if you haven't already done so): https://github.com/cs320-wisc/f22/blob/main/labs/lab5.md
 
 **Note:** if we haven't gotten to BSTs in lecture and lab yet, you can still work on some of the questions in parts 3 and 4, but you should wait to work on the ones related to trees.
 
@@ -229,18 +222,12 @@ Create a bar plot with two bars:
 
 <img src="q7.png">
 
-### Q8: what is the relationship between property value and loan amount?
+### Q8: How many applicants indicate multiple racial identities?
 
-Answer with a scatter plot where each point is a loan, the x-axis is the property value, and the y-axis is the loan amount.  Use black points and `alpha` (transparency) of 0.01.
+Answer with a bar graph, where the y axis should represent the number of applicants with the corresponding x-axis represents number of race selections.
 
-Exclude any loans for properties valued at >$1 million from the scatter plot.
+### Q9: How many leaf nodes are in the tree?
+Write a recursive function or method to count the number of leaf nodes present in the given BST.
 
-<img src="q8.png">
-
-### Q9: what is the distribution of race for UWCU loan applicants?
-
-Answer with a bar graph, where the x-axis is race, and the y-axis is number of applicants.  If an applicant has selected a single value for race, that is what should appear on the x-axis.  Otherwise, if they made multiple selections, they should be counted as "2+", and if they made zero selections, they should be counted as "unknown".
-
-### Q10: how many nodes are in the tree?
-
-Write a recursive function or method to count the nodes.
+### Q10: What is the second largest element in the Bank BST?
+Write a recursive function or method to find the second largest element in the BST.

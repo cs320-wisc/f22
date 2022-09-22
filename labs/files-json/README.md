@@ -1,4 +1,4 @@
-# Review Files and JSON
+# Files and JSON
 
 ## Writing
 
@@ -25,7 +25,7 @@ line2
 
 ## Reading
 
-Create a file named `dog.json` in Jupyter.  You can use the "New / Text File" menu, like this:
+Create a file named `dog.json` in Jupyter.  You can right click in the file browser to create a new file:
 
 <img src="1.png" width=400>
 
@@ -38,9 +38,9 @@ Copy the following:
 }
 ```
 
-Paste it into `dog.json`, and be sure to SAVE it:
+Paste it into `dog.json` (which you should open with the "Editor"), and be sure to SAVE it:
 
-<img src="2.png" width=400>
+<img src="2.png" width=600>
 
 Now, back in your notebook, run this:
 

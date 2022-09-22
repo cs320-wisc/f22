@@ -1,12 +1,10 @@
-# DRAFT!  Don't start yet.
-
 # Lab 4
 
 Activities:
 
-1. Discuss with your group: "If you could shrink any animal to puppy-size, what animal would you own?"
+1. Discuss with your group: "If you could shrink any animal to puppy-size, what animal would you have as a pet?"
 
-2. review Python [files and JSON](./files-json)
+2. practice Python [files and JSON](./files-json)
 
 3. learn how to read [zip files](./files-zip) in Python
 

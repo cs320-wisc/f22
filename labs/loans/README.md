@@ -8,11 +8,10 @@ later when working on P2).
 ## loans.py
 
 In Jupyter, do the following:
-1. go to s22/p2
-2. click "New"
-3. choose "Text File"
-4. "File" > "Rename"
-5. type "loans.py"
+1. go to f22/p2
+2. right click in the file explore and create a "New File"
+3. name it loans.py
+4. open it
 
 Using a .py module is easy -- just run `import some_mod` to run
 `some_mod.py`, loading any function or classes it has.
@@ -333,3 +332,5 @@ And get this:
 ```
 
 3. make the method a generator.  Get rid of the `result` list, and instead of appending to it, yield `amt`.  Make sure the loop works the same way as before in your notebook.  One advantage of the generator is that the method will work even if the payment is too small (the generator will keep yielding larger amounts as the debt keeps growing).
+
+That last step is very important to passing the P2 tests!

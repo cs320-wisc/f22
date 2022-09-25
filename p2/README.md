@@ -2,6 +2,8 @@
 
 ## Corrections/Clarifications
 
+* none yet
+
 ## Overview
 
 Sadly, there is a long history of lending discrimination based on race

@@ -1,5 +1,3 @@
-# DRAFT - Don't start yet!
-
 # Project 2: Loan Analysis
 
 ## Corrections/Clarifications
@@ -229,5 +227,6 @@ Answer with a bar graph, where the y axis should represent the number of applica
 ### Q9: How many leaf nodes are in the tree?
 Write a recursive function or method to count the number of leaf nodes present in the given BST.
 
-### Q10: What is the second largest element in the Bank BST?
-Write a recursive function or method to find the second largest element in the BST.
+### Q10: What is the second largest interest rate in the Bank BST?
+
+**Hint:** you could write a recursive function or method that can return the top 2 (or N) keys for any subtree.

@@ -7,5 +7,5 @@ question,type,value,notes
 6,Figure,plt.Figure(),
 7,Figure,plt.Figure(),
 8,Figure,plt.Figure(),
-9,Figure,plt.Figure(),
-10,int,32,
+9,int,9,
+10,float,6.99,

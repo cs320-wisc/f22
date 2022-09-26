@@ -9,3 +9,5 @@ Activities:
 2. Practice [geopandas](./geopandas)
 
 3. Start the [edgar-util.py](./edgar-util) module used by P5
+
+4. remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996

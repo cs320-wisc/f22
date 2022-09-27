@@ -11,3 +11,5 @@ Activities:
 3. Create a [Guess that Function](./flask-guess) game in Flask
 
 4. Consider starting the group portion of P4 with your group during the remaining lab time
+
+5. remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996

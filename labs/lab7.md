@@ -11,3 +11,5 @@ Activities:
 2. Practice your [Linux Skills](./linux-skills)
 
 3. Complete the [Exception Treasure Hunt](./bug-hunt)
+
+4. remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996

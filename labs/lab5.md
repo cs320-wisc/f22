@@ -9,3 +9,5 @@ Activities:
 2. inside your `s22` repo, there is a notebook `s22/labs/debug/4-self/main.ipynb`.  Open it and fix the bugs.  Remember to do "git pull" first (we recently added some hints to the end).
 
 3. create a [binary search tree](./bst-groups) for use in P2.  Note: some of you like to do lab exercises before the scheduled lab time, but I don't recommend doing this part until we've covered BSTs in class.
+
+4. remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996

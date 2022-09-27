@@ -11,3 +11,5 @@ Activities:
 3. practice graph [search order](./dfs-vs-bfs)
 
 4. start the [module](./dfs-class) you'll be building for P3
+
+5. remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996

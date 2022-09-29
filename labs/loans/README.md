@@ -133,6 +133,8 @@ Putting `applicant` at the end of a cell or printing `repr(applicant)` should sh
 Applicant('20-30', ['American Indian or Alaska Native', 'Asian', 'Black or African American'])
 ```
 
+Note: The `race` attribute should be sorted lexicographically.
+
 ### `lower_age`
 
 You might notice that ages are given as strings rather than ints

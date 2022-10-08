@@ -114,7 +114,7 @@ grid.
 `df.loc["????"]` looks up a row in a DataFrame.  Use it to lookup the
 children of node B.
 
-Complete the following to print all the children of "B" (should be "C" and "D"):
+Complete the following to print all the children of "B" (should only be "C"):
 
 ```python
 for node, has_edge in df.loc["B"].items():

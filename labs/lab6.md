@@ -1,5 +1,3 @@
-# DRAFT!  Don't start yet.
-
 # Lab 6
 
 Activities:

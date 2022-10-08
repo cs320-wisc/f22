@@ -7,7 +7,7 @@ Start a new notebook on your virtual machine, then paste+run this code
 in a cell (you don't need to read it):
 
 ```python
-from IPython.core.display import display, HTML
+from IPython.display import display, HTML
 from graphviz import Digraph
 
 class test_graph:

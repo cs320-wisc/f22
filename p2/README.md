@@ -165,6 +165,8 @@ Finish the `Node` and `BST` classes from lab (if you haven't already done so): h
 
 **Note:** if we haven't gotten to BSTs in lecture and lab yet, you can still work on some of the questions in parts 3 and 4, but you should wait to work on the ones related to trees.
 
+**Before you moving on to Part 3 ...** 
+
 Add a special method to `BST` so that if `t` is a `BST` object so that it is possible to lookup items with `t["some key"]` instead of `t.root.lookup("some key")`.
 
 ## Part 3: First Home Bank Analysis
@@ -185,9 +187,9 @@ Answer with a dictionary, like this:
 {'65-74': 21, '45-54': 21, ...}
 ```
 
-### Tree of Loans
+### Tree of Loans for Q4 and Q5
 
-For the following questions, create a `BST` tree.  Loop over every loan in thebank, adding each to the tree.  The `key` passed to the `add` call should be the `.interest_rate` of the `Loan` object, and the `val` passed to `add` should be the `Loan` object itself.
+For the following questions, create a `BST` tree.  Loop over every loan in the bank, adding each to the tree.  The `key` passed to the `add` call should be the `.interest_rate` of the `Loan` object, and the `val` passed to `add` should be the `Loan` object itself.
 
 ### Q4: how many interest rate values are missing?
 

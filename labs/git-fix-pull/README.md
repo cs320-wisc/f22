@@ -35,7 +35,7 @@ Aborting
 ```
 
 There's a new version of `example.py` on GitHub, but git doesn't want
-to overwrite your change.  One was to fix this is with "stashing", as
+to overwrite your change.  One way to fix this is with "stashing", as
 the error suggests.  We won't cover stashing in 320, but feel free to
 read about it on your own.
 
@@ -43,7 +43,7 @@ The easiest way to solve this is to undo your changes (perhaps after
 backing them up to another file), then pull again.  Let's try that:
 
 7. `cp example.py backup-example.py`
-8. `git checkout example.py` (this undoes your changes)
+8. `git restore example.py` (this undoes your changes)
 9. `git pull`
 
 You'll now have the version with your changes in `backup-example.py`

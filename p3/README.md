@@ -82,7 +82,7 @@ what you expect when starting from other nodes.
 ### `FileSearcher` Class
 
 Add another class, `FileSearcher`, which also inherits from
-`GraphSearcher`.  You job is to implement the three methods `__init__`, `visit_and_get_children`, and `message` and inherit other methods.
+`GraphSearcher`.  You job is to implement the three methods `__init__`, `visit_and_get_children`, and `concat_order` and inherit other methods.
 1. `__init__`: the constructor of `FileSearcher` which does not take additional parameter besides the instance itself
 2. `visit_and_get_children`: visit the file to record its value and get its children
 3. `concat_order`: concatenate the values in `self.order` to a string

@@ -124,31 +124,31 @@ combination of these that can upload/download files to/from a VM.
 On your **laptop**, run the following (don't SSH first; replace `USER` and `VM_IP`):
 
 ```
-scp USER@VM_IP:~/s22/p3/scrape.py scrape.py
+scp USER@VM_IP:~/f22/p3/scrape.py scrape.py
 ls
 ```
 
 You should see `scrape.py` downloaded to your own computer.  You could
-use `scp USER@VM_IP:~/s22/p3/scrape.py some_other_name.py` if you
+use `scp USER@VM_IP:~/f22/p3/scrape.py some_other_name.py` if you
 wanted your download of `scrape.py` to be named something else on your
 computer.
 
 What if we want to download all of `p3` to the current directory (remember `.` is a shorthand for the current directory)?  Try this:
 
 ```
-scp USER@VM_IP:~/s22/p3 .
+scp USER@VM_IP:~/f22/p3 .
 ```
 
 You should get an error like this:
 
 ```
-scp: /home/USER/s22/p3: not a regular file
+scp: /home/USER/f22/p3: not a regular file
 ```
 
 If you want `scp` to work on directories (which contain other directories, which contain other directories, which ...), you need to use recursive mode: `-r`.
 
 ```
-scp -r USER@VM_IP:~/s22/p3 .
+scp -r USER@VM_IP:~/f22/p3 .
 ```
 
 There should now be a `p3` directory on your laptop with all your
@@ -160,7 +160,7 @@ SSH to your VM, then run the `find` command.  It will find every file
 and directory (including sub files and directories) at your current
 location, in this case your user's home directory.
 
-What if you want to find all the Jupyter notebooks in the `s22`
+What if you want to find all the Jupyter notebooks in the `f22`
 directory?  First, `cd` there.
 
 On Linux, you can combine commands like this: `PROGRAM1 | PROGRAM2`.
@@ -191,7 +191,7 @@ on port 2020.
 Open up a second terminal window and SSH again, so that you have two
 SSH sessions active at once.
 
-1. in one SSH session, `cd` to `s22/labs/linux-skills`, then run `python3 port_user.py`.  The program uses port `55555`, so no other process can start using that port until `port_user.py` stops.
+1. in one SSH session, `cd` to `f22/labs/linux-skills`, then run `python3 port_user.py`.  The program uses port `55555`, so no other process can start using that port until `port_user.py` stops.
 2. in the SSH session, run `lsof | grep 55555`
 
 You should see something somewhat like this (details will vary):

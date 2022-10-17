@@ -2,7 +2,7 @@
 
 ## Corrections/Clarifications
 
-* None yet
+* 10/17 - Updated `MatrixSearcher` class name to match class made in Lab 6.
 
 ## Overview
 
@@ -43,7 +43,7 @@ help from 320 staff (mentors, TAs, instructor).  You <b>may not</b>
 seek help from other 320 students (outside your group) or
 anybody outside the course.
 
-## Part 1: Base Class `GraphSearcher` and DFS on Matrices (`MatricesSearcher`)
+## Part 1: Base Class `GraphSearcher` and DFS on Matrices (`MatrixSearcher`)
 
 Complete scrape.py from lab exercises if you haven't already done so:
 https://github.com/cs320-wisc/f22/blob/main/labs/lab6.md

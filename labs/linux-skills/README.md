@@ -58,7 +58,7 @@ to restart it (don't `cd` into a sub directory first, or you won't be
 able to access files outside that sub directory):
 
 ```
-nohup python3 -m notebook --no-browser --ip=0.0.0.0 --port=2020
+nohup python3 -m jupyterlab --no-browser --ip=0.0.0.0 --port=2020
 ```
 
 ## 2. Networking

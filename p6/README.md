@@ -267,10 +267,10 @@ https://github.com/cs320-wisc/s22/blob/main/lec/29%20Regression%201/lec1.ipynb
 
 ## Part 2:
 
-2. Construct a least 2 regression models predicting POP100. They should differ in terms of (a) what columns they use and/or (b) whether or not they're preceded by transformers in an sklearn Pipeline
-3. perform cross validation on both your models over your training dataset
-4. Write a comment recommending which model you recommend for this prediction task. Factors you might consider are (a) high scores, (b) little variance across scores, (c) model simplicity, and (d) anything else you think is important.
-5. Fit your recommended model to the entire training dataset and score it against the test dataset
+1. Construct at least 2 regression models predicting POP100. They should differ in terms of (a) what columns they use and/or (b) whether or not they're preceded by transformers in an sklearn Pipeline
+2. Perform cross validation on both your models over your training dataset
+3. Write a comment recommending which model you recommend for this prediction task. Factors you might consider are (a) high scores, (b) little variance across scores, (c) model simplicity, and (d) anything else you think is important.
+4. Fit your recommended model to the entire training dataset and score it against the test dataset
 
 ### Q17: How does your recommended model score against the test dataset?
 

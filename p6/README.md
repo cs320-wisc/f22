@@ -1,8 +1,8 @@
 # DRAFT DO NOT START
 
 To Do: 
-Update link in q16 when lecture notes for this semester are posted
-Update lab link
+- [ ] Update link in q16 when lecture notes for this semester are posted.
+- [ ] Update lab link
 
 # Project 6: Regression Models
 
@@ -135,7 +135,7 @@ Answer with a scatter plot showing the actual values (both train and test) and t
 
 Use a `.text` call to annotate Brown County, and a legend to label the actual and predicted parts as in the following:
 
-<img src="q11.png">
+<img src="q11.png" width="500">
 
 ## Part 3: Land Use Features
 
@@ -196,7 +196,7 @@ c[95] = [0.43921568628, 0.63921568628, 0.72941176471]
 custom_cmap = ListedColormap(c)
 ```
 
-<img src="q13.png">
+<img src="q13.png" width="500">
 
 ### Q14: What portion of Brown County is "Open Water"?
 

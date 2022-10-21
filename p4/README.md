@@ -218,7 +218,7 @@ POST the data to the `/email` route in your app, so add that to your
 @app.route('/email', methods=["POST"])
 def email():
     email = str(request.data, "utf-8")
-    if re.fullmatch(r"????", email): # 1
+    if len(re.findall(r"????", email)) > 0: # 1
         with open("emails.txt", "a") as f: # open file in append mode
             f.????(email + ????) # 2
         return jsonify(f"thanks, you're subscriber number {num_subscribed}!")
@@ -287,10 +287,10 @@ than one request per minute from any one IP address.
 
 **Hint 1:** consider combining Flask's `jsonify` with Pandas `to_dict`: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_dict.html
 
-**Hint 2:** we cover rate limiting at the end of October 19 lecture.  
+**Hint 2:** we cover rate limiting in the October 21 lecture.
 
 ## IP visitors of JSON Page
-Now add a resource at http://your-ip:5000/visitors.json that display the IP addresses that have visited your `browse.json` resource. **Hint 1:** use the client IPs stored in previous excersise (rate limiting). 
+Now add a resource at http://your-ip:5000/visitors.json that returns a list of the IP addresses that have visited your `browse.json` resource. **Hint 1:** use the client IPs stored in previous excersise (rate limiting). 
 
 ## Dashboard
 

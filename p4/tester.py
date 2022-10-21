@@ -366,6 +366,7 @@ def email():
         "user@exampleDOTcom": False,
         "user123@gmail.com": True,
         "user@gmail@gmail.com": False,
+        "user@hotmail.cooooooooooom": False
     }
 
     if os.path.exists("emails.txt"):
@@ -403,14 +404,14 @@ def email():
                     % (resp, email)
                 )
             else:
-                points += 2
+                points += 1
 
     if os.path.exists("emails.txt"):
         with open("emails.txt") as f:
             actual = {line.strip() for line in f}
             expected = {k for k in emails if emails[k]}
             if actual == expected:
-                points += 4
+                points += 6
             else:
                 print(
                     "found emails {} in emails.txt, but expected {}".format(
@@ -518,7 +519,15 @@ def rate_test():
     assert status == "200 OK"
     status, headers, body = app_req("/browse.json", remote_addr="1.2.3.7")
     assert status == "429 TOO MANY REQUESTS"
-    return 5
+    points = 3
+
+    status, headers, body = app_req("/visitors.json", remote_addr="1.2.3.8")
+    if status == "200 OK":
+        points += 1
+    if "1.2.3.7" in body and "1.2.3.8" in body:
+        points += 1
+
+    return points
 
 @test(points=6)
 def has_svgs():

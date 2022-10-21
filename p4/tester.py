@@ -366,6 +366,7 @@ def email():
         "user@exampleDOTcom": False,
         "user123@gmail.com": True,
         "user@gmail@gmail.com": False,
+        "user@hotmail.cooooooooooom": False
     }
 
     if os.path.exists("emails.txt"):
@@ -403,7 +404,7 @@ def email():
                     % (resp, email)
                 )
             else:
-                points += 2
+                points += 1.5
 
     if os.path.exists("emails.txt"):
         with open("emails.txt") as f:

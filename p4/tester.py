@@ -519,6 +519,9 @@ def rate_test():
     assert status == "200 OK"
     status, headers, body = app_req("/browse.json", remote_addr="1.2.3.7")
     assert status == "429 TOO MANY REQUESTS"
+    status, headers, body = app_req("/visitors.json", remote_addr="1.2.3.8")
+    assert status == "200 OK"
+    assert "1.2.3.7" in body and "1.2.3.8" in body    
     return 5
 
 @test(points=6)

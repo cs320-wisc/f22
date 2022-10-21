@@ -1,6 +1,8 @@
 # DRAFT DO NOT START
 
-To Do: Update link in q16 when lecture notes for this semester are posted
+To Do: 
+Update link in q16 when lecture notes for this semester are posted
+Update lab link
 
 # Project 6: Regression Models
 

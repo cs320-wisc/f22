@@ -243,8 +243,7 @@ def app_req(path, expect_str=True, expect_errors=False, method="GET", input_body
 @test(points=10)
 def has_pages():
     points = 0
-
-    for link in ["/", "browse.html", "donate.html"]:
+    for link in ["/", "browse.html", "donate.html"]:         
         status, headers, body = app_req(link)
         if status == "200 OK":
             points += 2
@@ -254,8 +253,11 @@ def has_pages():
             else:
                 print("page missing headers:", link)
         else:
-            print("missing page:", link)
-
+            if link == "donate.html" and status != "404 NOT FOUND":
+                print(link, " was found but missing default query arguments in your query string") 
+            else:
+                print("missing page:", link)
+                
     status, headers, body = app_req("/missing.html", expect_errors=True)
     if status == "404 NOT FOUND":
         points += 1

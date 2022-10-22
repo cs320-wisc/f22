@@ -1,5 +1,10 @@
 # Project 4: Building a Data Website
 
+## Corrections/Clarifications
+
+* 10/21 - Added message in tester.py to validate default query string arguments in "donate.html"
+* 10/21 - Changed dashboard examples
+
 ## Handin
 
 When you're done, you'll hand in a .zip file containing `main.py`,
@@ -290,7 +295,9 @@ than one request per minute from any one IP address.
 **Hint 2:** we cover rate limiting in the October 21 lecture.
 
 ## IP visitors of JSON Page
-Now add a resource at http://your-ip:5000/visitors.json that returns a list of the IP addresses that have visited your `browse.json` resource. **Hint 1:** use the client IPs stored in previous excersise (rate limiting). 
+Now add a resource at http://your-ip:5000/visitors.json that returns a list of the IP addresses that have visited your `browse.json` resource. 
+
+**Hint 1:** use the client IPs stored in previous excersise (rate limiting). 
 
 ## Dashboard
 
@@ -312,24 +319,24 @@ your .svg routes).
 
 ```html
 <img src="dashboard_1.svg"><br><br>
-<img src="dashboard_1.svg?cmap=damage"><br><br>
+<img src="dashboard_1.svg?bins=100"><br><br>
 <img src="dashboard_2.svg"><br><br>
 ```
 
 The dashboard SVGs may look something like this:
 
 #### dashboard_1.svg
-![Dashboard_1](img/dashboard_1.svg)
+![Dashboard_1](img/plot_histogram.svg)
 
-#### dashboard_1.svg?cmap=damage
+#### dashboard_1.svg?bins=100
 
-Here, the query string uses `cmap`, which specifies an additional third column to use for a colormap.
+Here, the query string uses `bins`, which in this case specifies the number of bins used to generate the bar plot.
 
-![Dashboard_1 cmap damage](img/dashboard_1_cmap_damage.svg)
+![Dashboard_1 bins 100](img/plot_histogram100.svg)
 
 #### dashboard_2.svg
 
-![Dashboard_2](img/dashboard_2.svg)
+![Dashboard_2](img/plot_timeseries.svg)
 
 When using query strings, ensure appropriate default values are supplied.
 

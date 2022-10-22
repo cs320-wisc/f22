@@ -295,7 +295,7 @@ than one request per minute from any one IP address.
 **Hint 2:** we cover rate limiting in the October 21 lecture.
 
 ## IP visitors of JSON Page
-Now add a resource at http://your-ip:5000/visitors.json that returns a list of the IP addresses that have visited your `browse.json` resource. 
+Now add a resource at `http://your-ip:5000/visitors.json` that returns a list of the IP addresses that have visited your `browse.json` resource. 
 
 **Hint 1:** use the client IPs stored in previous excersise (rate limiting). 
 

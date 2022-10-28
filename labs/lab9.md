@@ -1,5 +1,3 @@
-# DRAFT!  Don't start yet.
-
 # Lab 9
 
 Activities:
@@ -10,4 +8,4 @@ Activities:
 
 3. Create a [Guess that Function](./flask-guess) game in Flask
 
-4. remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996
+4. remember that each study group member **who attended in-person** should fill the TopHat question: https://app.tophat.com/e/594996

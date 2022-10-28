@@ -12,4 +12,4 @@ Activities:
 
 4. visualize [decision boundaries](./decision-boundaries) for a classifier
 
-5. remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996
+5. remember that each study group member **who attended in-person** should fill the TopHat question: https://app.tophat.com/e/594996

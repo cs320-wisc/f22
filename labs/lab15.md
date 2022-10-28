@@ -14,4 +14,4 @@ Work on practice questions with your team to prep for the final exam: https://ca
 
 ## Reminder
 
-Remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996
+Each study group member **who attended in-person** should fill the TopHat question: https://app.tophat.com/e/594996

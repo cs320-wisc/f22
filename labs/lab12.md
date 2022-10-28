@@ -10,4 +10,4 @@ Activities:
 
 3. Use a LinearRegression to [predict how long](./regression) it will take to run a piece of code
 
-4. remember that each study group member should fill the TopHat question: https://app.tophat.com/e/594996
+4. remember that each study group member **who attended in-person** should fill the TopHat question: https://app.tophat.com/e/594996

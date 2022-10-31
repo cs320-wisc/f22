@@ -460,39 +460,61 @@ def ab_test_helper(click_through=[], best=0):
     def _transform(html: str):
         # regex didn't work with one of the submissions that had to be reran
         return html.replace('donate.html?from=A', '').replace('donate.html?from=B', '') 
-
+    
     # phase 1: alternate
+    
+    learn_versions = set(html[:learn])
+    
+    only_varied_query_str = False 
+    if len(learn_versions) == 1: 
+        print("the same version was shown each time during A/B test") 
+        return points
+    if len(learn_versions) > 2: 
+        print("more than two versions of the home page was shown during A/B test")
+        return points
+    
     for i in range(1, learn):
         # breakpoint()
-        if _transform(html[i]) == _transform(html[i - 1]):
-            if html[i] == html[i - 1]:
-                print("(a) did not alternate html in first %d visits" % learn)
-                return points
-            else:
-
-                global only_varied_query_str
-                only_varied_query_str = True
-        if i > 1 and html[i] != html[i - 2]:
-            print("(b) did not alternate html in first %d visits" % learn)
+        if html[i] == html[i - 1]:
+            print("home page did not alternate during A/B testing")
             return points
-
-    if only_varied_query_str:
-        print("alternated between versions, but they only differ at the query string.")
+        else:
+            if _transform(html[i]) == _transform(html[i - 1]):
+                only_varied_query_str = True
+                
+#         if i > 1 and html[i] != html[i - 2]:
+#             print("(b) did not alternate html in first %d visits" % learn)
+#             return points
 
     points += 1
+    
+    if only_varied_query_str:
+        print("A/B versions only differ at the query string")
+        return points
+    
+    points += 1
+    
+    # did they choose the best for phase 2?
+    if html[learn] != html[0] and html[learn] != html[1]: 
+        print("a different version C was chosen after the A/B test") 
+        return points
+    
+    if html[learn] != html[best]:
+        if best == 0: 
+            print("the A/B test showed A was better, but B was selected after the test")
+        else: 
+            print("the A/B test showed B was better, but A was selected after the test")
+        return points
+    
+    points += 2
 
     # phase 2: same
     for i in range(learn + 1, visits):
         if html[i] != html[i - 1]:
-            print("did not consistently show same page after first %d visits" % learn)
+            print("did not consistently show the same page after first %d visits" % learn)
             return points
-    points += 2
-
-    # did they choose the best for phase 2?
-    if html[learn] != html[best]:
-        print("did not choose the best version")
-    else:
-        points += 2
+        
+    points += 1
 
     return points
 

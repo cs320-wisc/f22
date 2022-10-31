@@ -475,6 +475,13 @@ def ab_test_helper(click_through=[], best=0):
     
     for i in range(1, learn):
         # breakpoint()
+        if "?from=" not in html[i]: 
+            print("didn't use query string")
+            return points
+        fromAB = html[i].split("?from=")[1][0]
+        if fromAB != "A" and fromAB != "B": 
+            print("from is not A and B") 
+            return points
         if html[i] == html[i - 1]:
             print("home page did not alternate during A/B testing")
             return points

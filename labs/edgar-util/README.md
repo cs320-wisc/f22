@@ -1,9 +1,5 @@
 # Lab: EDGAR Utilities Module
 
-## Corrections/Clarifications
-
-* Apr 5: clarified SIC code requirements
-
 ## Overview
 
 In the US, public companies need to regularly file various statements
@@ -293,12 +289,8 @@ code that loops over the results of the regular expression.
 
 Take a look at the industry codes defined here: https://www.sec.gov/corpfin/division-of-corporation-finance-standard-industrial-classification-sic-code-list
 
-Write a regular expression to find the code which follows the text
-"SIC" in `html`.  There may be other characters (not digits) between
-"SIC" and the number, so be sure to allow that.  You should find 6199
-in this case.
-
-**Hints:** SIC might occur in other places in the document. A good way to find the code is to look for the number immediately after "SIC=" (part of the URL which links to a page with filings for companies with that SIC). You may assume "SIC=" is only on the page once (within that URL).
+Write a regular expression to find numbers following the text
+"SIC=" in `html`.
 
 ### Exercise 3: Addresses
 

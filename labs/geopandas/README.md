@@ -8,7 +8,7 @@ maps:
 
 ```
 pip3 install --upgrade pip
-pip3 install geopandas shapely descartes geopy
+pip3 install geopandas shapely descartes geopy netaddr
 sudo apt install -y python3-rtree
 ```
 

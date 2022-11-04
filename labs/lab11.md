@@ -4,7 +4,7 @@
 
 Activities:
 
-1. Share with your group, *What was the last book you read?*
+1. Share with your group, *what was the last book you read?*
 
 2. Practice [geopandas](./geopandas)
 

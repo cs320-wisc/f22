@@ -146,7 +146,7 @@ Only count the requests made by users who were identified as crawlers (see the c
 
 ## Part 2: creating `edgar_utils.py` module
 
-This part is to be started during the [weekly lab](../labs/lab11.md).
+This part is to be started during the [weekly lab](../labs/lab10.md).
 Finish the `edgar_utils.py` module now if you didn't have enough time
 during the scheduled lab.
 

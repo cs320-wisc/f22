@@ -112,25 +112,33 @@ def compare_set(expected, actual, config={}):
         return expected == actual
 
 def compare_dict(expected, actual, config={}):
-    if '-' in expected:
-        new_expected = copy(expected)
-        new_expected.pop('-')
-        if compare_dict(new_expected, actual, config):
-            return True
+    expected = expected.copy()
+    actual = actual.copy()
+    expected.pop("-", None)
+    actual.pop("-", None)
 
     tolerance = config.get("tolerance", None)
 
-    if tolerance:
-        if expected.keys() != actual.keys():
-            return False
+    if expected.keys() != actual.keys():
+        expected_extras = set(expected.keys()) - set(actual.keys())
+        actual_extras = set(actual.keys()) - set(expected.keys())
+        if expected_extras:
+            print(f"output missing {len(expected_extras)} keys, such as {repr(sorted(expected_extras)[0])}")
+        if actual_extras:
+            print(f"output had {len(actual_extras)} extra keys, such as {repr(sorted(actual_extras)[0])}")
 
-        for key in expected.keys():
+        return False
+
+    for key in expected.keys():
+        if tolerance:
             if not compare_float(expected[key], actual[key], {"tolerance": tolerance}):
+                print(f"key {repr(key)} mapped to {actual[key]}, but should have been about {expected[key]}")
                 return False
-                
-        return True
+            elif expected[key] != actual[key]:
+                print(f"key {repr(key)} mapped to {actual[key]}, but should have been {expected[key]}")
+                return False
 
-    return expected == actual
+    return True
 
 def compare_vis(expected, actual, config={}):
     return type(expected) == type(actual)

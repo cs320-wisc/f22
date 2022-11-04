@@ -133,7 +133,7 @@ the true value will be even larger). Answer with an integer.
 
 Answer with a dictionary, with the (anonymized) IP as key and the number of requests seen in the logs as the values. Each row in the logs corresponds to one request. Note that the anonymized IP addresses are consistent between requests.
 
-**Hint:** for this question and most of the others expecting dictionary output, it might be easiest to use Pandas operations to process the data into a `Series` and to use the `to_dict()` method. Consider using tools like `groupby`, `apply`, and aggregation methods like `size()`. In Q30-32 from [P1](https://github.com/cs320-wisc/s22/tree/main/p1), there is an example of `apply`.
+**Hint:** read about the `value_counts` method for a Pandas series.
 
 ### Q3: what fraction of the requests had errors?
 

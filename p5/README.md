@@ -1,8 +1,5 @@
 # P5: EDGAR Web Logs
 
-## Note!!
-Please <b>do not</b> start P5 until the release date, it's a draft now.
-
 ## Corrections/Clarifications
 * Nov 10: modified tester.py and module_tester.py to allow 2 different regex in Filing.state() from edgar_utils.py, and corresponding answers for Q9.
 

@@ -1,6 +1,10 @@
 # P5: EDGAR Web Logs
 
+## Note!!
+Please <b>do not</b> start P5 until the release date, it's a draft now.
+
 ## Corrections/Clarifications
+* Nov 10: modified tester.py and module_tester.py to allow 2 different regex in Filing.state() from edgar_utils.py, and corresponding answers for Q9.
 
 ## Overview
 
@@ -130,7 +134,7 @@ the true value will be even larger). Answer with an integer.
 
 Answer with a dictionary, with the (anonymized) IP as key and the number of requests seen in the logs as the values. Each row in the logs corresponds to one request. Note that the anonymized IP addresses are consistent between requests.
 
-**Hint:** read about the `value_counts` method for a Pandas series.
+**Hint:** for this question and most of the others expecting dictionary output, it might be easiest to use Pandas operations to process the data into a `Series` and to use the `to_dict()` method. Consider using tools like `groupby`, `apply`, and aggregation methods like `size()`. In Q30-32 from [P1](https://github.com/cs320-wisc/s22/tree/main/p1), there is an example of `apply`.
 
 ### Q3: what fraction of the requests had errors?
 
@@ -146,7 +150,7 @@ Only count the requests made by users who were identified as crawlers (see the c
 
 ## Part 2: creating `edgar_utils.py` module
 
-This part is to be started during the [weekly lab](../labs/lab10.md).
+This part is to be started during the [weekly lab](../labs/lab11.md).
 Finish the `edgar_utils.py` module now if you didn't have enough time
 during the scheduled lab.
 
@@ -210,6 +214,20 @@ Answer with a dict, like the following:
  ...
 }
 ```
+
+You might get another dict with a different regex in the Filing.state(), which is also allowed:
+
+```
+{'CA': 92,
+ 'NY': 83,
+ 'TX': 67,
+ 'MA': 30,
+ 'IL': 25,
+ 'PA': 25,
+ ...
+}
+```
+
 
 ### Q10: what is the distribution of SIC codes for the filings in `docs.zip`?
 
@@ -308,11 +326,11 @@ The result should look similar to this:
 
 # Conclusion
 
-The EDGAR logs are supposedly anonymized (with the last three digits
-hidden), but we can still tell where the users live and what they're
+The EDGAR logs are supposedly anonymized (with the last three docs
+left), but we can still tell where the users live and what they're
 looking at.
 
- By connecting the filing information with the logs, we can learn a lot about the behavior of the investment firms which use the database - for example, we might learn which companies (or industries) a hedge fund might be considering investing in, and the extent to which it relies on automated vs. manual research in its trading.
+ By connecting the filing information with the logs, we can learn a lot about the behavior of the investment firms which use the database - for example, we might learn which companies (or industries) a hedge fund might be considering investing in, and the extent to which it relies on automated vs manual research in its trading.
 
 Others have used this same data to make good guesses
 about what docs various hedge funds and others are looking at, then

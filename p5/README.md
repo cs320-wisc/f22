@@ -225,6 +225,8 @@ You might get another dict with a different regex in the Filing.state(), which i
 }
 ```
 
+The showing order of each key-value pair doesn't really matter.
+
 
 ### Q10: what is the distribution of SIC codes for the filings in `docs.zip`?
 

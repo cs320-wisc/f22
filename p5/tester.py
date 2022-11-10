@@ -112,33 +112,25 @@ def compare_set(expected, actual, config={}):
         return expected == actual
 
 def compare_dict(expected, actual, config={}):
-    expected = expected.copy()
-    actual = actual.copy()
-    expected.pop("-", None)
-    actual.pop("-", None)
+    if '-' in expected:
+        new_expected = copy(expected)
+        new_expected.pop('-')
+        if compare_dict(new_expected, actual, config):
+            return True
 
     tolerance = config.get("tolerance", None)
 
-    if expected.keys() != actual.keys():
-        expected_extras = set(expected.keys()) - set(actual.keys())
-        actual_extras = set(actual.keys()) - set(expected.keys())
-        if expected_extras:
-            print(f"output missing {len(expected_extras)} keys, such as {repr(sorted(expected_extras)[0])}")
-        if actual_extras:
-            print(f"output had {len(actual_extras)} extra keys, such as {repr(sorted(actual_extras)[0])}")
+    if tolerance:
+        if expected.keys() != actual.keys():
+            return False
 
-        return False
-
-    for key in expected.keys():
-        if tolerance:
+        for key in expected.keys():
             if not compare_float(expected[key], actual[key], {"tolerance": tolerance}):
-                print(f"key {repr(key)} mapped to {actual[key]}, but should have been about {expected[key]}")
                 return False
-            elif expected[key] != actual[key]:
-                print(f"key {repr(key)} mapped to {actual[key]}, but should have been {expected[key]}")
-                return False
+                
+        return True
 
-    return True
+    return expected == actual
 
 def compare_vis(expected, actual, config={}):
     return type(expected) == type(actual)
@@ -169,6 +161,51 @@ def parse_question_config(c):
         config[parts[0]] = parts[1].strip()
     return config
 
+### fix for another correct answer in q9
+q9_alternative_answer = {'CA': 92,
+ 'NY': 83,
+ 'TX': 67,
+ 'MA': 30,
+ 'IL': 25,
+ 'PA': 25,
+ 'CO': 25,
+ 'NJ': 23,
+ 'FL': 21,
+ 'MN': 15,
+ 'VA': 15,
+ 'CT': 14,
+ 'MD': 13,
+ 'MI': 11,
+ 'OH': 10,
+ 'WI': 9,
+ 'GA': 9,
+ 'NC': 9,
+ 'DE': 9,
+ 'OK': 7,
+ 'IA': 6,
+ 'NV': 6,
+ 'AZ': 5,
+ 'IN': 5,
+ 'KS': 5,
+ 'UT': 5,
+ 'MO': 4,
+ 'TN': 4,
+ 'WA': 3,
+ 'OR': 2,
+ 'KY': 2,
+ 'LA': 2,
+ 'NE': 2,
+ 'WV': 2,
+ 'ID': 1,
+ 'DC': 1,
+ 'NM': 1,
+ 'VT': 1,
+ 'AR': 1,
+ 'MS': 1,
+ 'SD': 1,
+ 'AL': 1,
+ 'ME': 1}
+
 def compare(expected_csv, actual_csv):
     result = {"score": 0, "errors": []}
     passing = 0
@@ -192,17 +229,34 @@ def compare(expected_csv, actual_csv):
         config = parse_question_config(expected["notes"])
         if "run" in config:
             exec(config["run"])
-        if compare_fn(eval(expected["value"]), eval(actual["value"]), config):
-            passing += 1
+        if qnum == 9:
+            if compare_fn(eval(expected["value"]), eval(actual["value"]), config):
+                passing += 1
+            elif compare_fn(eval(f"{q9_alternative_answer}"), eval(actual["value"]), config):
+                passing += 1
+            else:
+                err = [
+                    f"Question {qnum}:",
+                    f"  EXPLANATION: Two answers in the expected part will be accepted.",
+                    f"  EXPECTED_VERSION_1: {expected['value']}",
+                    f"  EXPECTED_VERSION_2: {q9_alternative_answer}",
+                    f"  ACTUAL: {actual['value']}",
+                ]
+                if expected["notes"]:
+                    err.append(f"  NOTES: {expected['notes']}")
+                result["errors"].append("\n".join(err))
         else:
-            err = [
-                f"Question {qnum}:",
-                f"  EXPECTED: {expected['value']}",
-                f"  ACTUAL: {actual['value']}",
-            ]
-            if expected["notes"]:
-                err.append(f"  NOTES: {expected['notes']}")
-            result["errors"].append("\n".join(err))
+            if compare_fn(eval(expected["value"]), eval(actual["value"]), config):
+                passing += 1
+            else:
+                err = [
+                    f"Question {qnum}:",
+                    f"  EXPECTED: {expected['value']}",
+                    f"  ACTUAL: {actual['value']}",
+                ]
+                if expected["notes"]:
+                    err.append(f"  NOTES: {expected['notes']}")
+                result["errors"].append("\n".join(err))
 
     result["missing"] = sorted(set(expected_rows.keys()) - set(actual_rows.keys()))
     score = round(100 * passing / len(expected_rows))

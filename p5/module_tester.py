@@ -32,20 +32,23 @@ def compare_lists(actual, expected):
     first_error = None
 
     for i, (act, exp) in enumerate(zip(actual, expected)):
-        act = process(act)
-        exp = process(exp)
-
-        if exp is None:
-            match = act is None
-        elif type(exp) is list:
-            match = set(act) == set(exp)
-        else:
-            match = act == exp
-
-        if match:
+        # for expected state OX or DE, allow any answers
+        if exp == 'OX' or exp == 'DE':
             score += 1
-        elif first_error is None:
-            first_error = i, act, exp
+        else:
+            act = process(act)
+            exp = process(exp)
+
+            if exp is None:
+                match = act is None
+            elif type(exp) is list:
+                match = set(act) == set(exp)
+            else:
+                match = act == exp
+            if match:
+                score += 1
+            elif first_error is None:
+                first_error = i, act, exp
 
     return score, first_error
 

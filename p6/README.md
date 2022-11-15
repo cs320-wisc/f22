@@ -1,9 +1,3 @@
-# DRAFT DO NOT START
-
-To Do: 
-- [ ] Update link in q16 when lecture notes for this semester are posted.
-- [ ] Update lab link
-
 # Project 6: Regression Models
 
 ## Corrections/Clarifications
@@ -135,7 +129,7 @@ Answer with a scatter plot showing the actual values (both train and test) and t
 
 Use a `.text` call to annotate Brown County, and a legend to label the actual and predicted parts as in the following:
 
-<img src="q11.png" width="500">
+<img src="q11.png">
 
 ## Part 3: Land Use Features
 
@@ -196,7 +190,7 @@ c[95] = [0.43921568628, 0.63921568628, 0.72941176471]
 custom_cmap = ListedColormap(c)
 ```
 
-<img src="q13.png" width="500">
+<img src="q13.png">
 
 ### Q14: What portion of Brown County is "Open Water"?
 
@@ -269,10 +263,10 @@ https://github.com/cs320-wisc/s22/blob/main/lec/29%20Regression%201/lec1.ipynb
 
 ## Part 2:
 
-1. Construct at least 2 regression models predicting POP100. They should differ in terms of (a) what columns they use and/or (b) whether or not they're preceded by transformers in an sklearn Pipeline
-2. Perform cross validation on both your models over your training dataset
-3. Write a comment recommending which model you recommend for this prediction task. Factors you might consider are (a) high scores, (b) little variance across scores, (c) model simplicity, and (d) anything else you think is important.
-4. Fit your recommended model to the entire training dataset and score it against the test dataset
+2. Construct a least 2 regression models predicting POP100. They should differ in terms of (a) what columns they use and/or (b) whether or not they're preceded by transformers in an sklearn Pipeline
+3. perform cross validation on both your models over your training dataset
+4. Write a comment recommending which model you recommend for this prediction task. Factors you might consider are (a) high scores, (b) little variance across scores, (c) model simplicity, and (d) anything else you think is important.
+5. Fit your recommended model to the entire training dataset and score it against the test dataset
 
 ### Q17: How does your recommended model score against the test dataset?
 

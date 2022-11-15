@@ -1,5 +1,3 @@
-# DRAFT DO NOT START
-
 # Project 6: Regression Models
 
 * none yet

@@ -4,6 +4,8 @@
 
 ## Corrections/Clarifications
 
+* Nov 16: updated link to lecture examples from this semester
+
 ## Overview
 
 We will be making predictions about census data for Wisconsin using
@@ -266,7 +268,7 @@ Include a comment discussing what the graph is showing you and what it means for
 
 You can search for "How can we interpret what features the model is relying on?" in the lecture examples:
 
-https://github.com/cs320-wisc/s22/blob/main/lec/29%20Regression%201/lec1.ipynb (note: this link is to Spring 22; we'll update to Fall 22 once we do this in lecture).
+https://github.com/cs320-wisc/f22/tree/main/lec/29-regression1
 
 ## Part 2:
 

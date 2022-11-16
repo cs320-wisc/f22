@@ -1,6 +1,7 @@
 # P5: EDGAR Web Logs
 
 ## Corrections/Clarifications
+* Nov 15: Add an alternative plot for q15.
 * Nov 10: modified tester.py and module_tester.py to allow 2 different regex in Filing.state() from edgar_utils.py, and corresponding answers for Q9.
 
 ## Overview
@@ -147,7 +148,7 @@ Only count the requests made by users who were identified as crawlers (see the c
 
 ## Part 2: creating `edgar_utils.py` module
 
-This part is to be started during the [weekly lab](../labs/lab10.md).
+This part is to be started during the [weekly lab](../labs/lab11.md).
 Finish the `edgar_utils.py` module now if you didn't have enough time
 during the scheduled lab.
 
@@ -319,6 +320,10 @@ south = 20
 * the color of background is "lightgray"
 
 The result should look similar to this:
+
+![](geo_alternative.png)
+
+Due to the misleading plot before, the following plot is also acceptable:
 
 ![](geo.png)
 

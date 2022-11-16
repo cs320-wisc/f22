@@ -1,6 +1,10 @@
 # Project 6: Regression Models
 
+* none yet
+
 ## Corrections/Clarifications
+
+* Nov 16: updated link to lecture examples from this semester
 
 ## Overview
 
@@ -83,7 +87,7 @@ Consult the [Census documentation](https://tigerweb.geo.census.gov/tigerwebmain/
 
 ## Part 2: Predicting Population using Housing Units
 
-You'll need to wait to do the lab before continuing: https://github.com/cs320-wisc/s22/blob/main/labs/lab13.md
+You'll need to wait to do the lab before continuing: https://github.com/cs320-wisc/f22/blob/main/labs/lab12.md
 
 ### Feature 2: `HU100` (housing units)
 
@@ -129,7 +133,7 @@ Answer with a scatter plot showing the actual values (both train and test) and t
 
 Use a `.text` call to annotate Brown County, and a legend to label the actual and predicted parts as in the following:
 
-<img src="q11.png">
+<img src="q11.png" width="500">
 
 ## Part 3: Land Use Features
 
@@ -148,6 +152,11 @@ A = np.array([
 ```
 
 ### Q13: How does Brown County look?
+
+NOTE: in lab, you had to use TIGERweb to get the geodata.  You
+shouldn't do that here because we already did that saved the results
+to `counties.geojson`, which you should use.  Otherwise, this is very
+similar to the lab exercise.
 
 You can show the image like this:
 
@@ -190,7 +199,7 @@ c[95] = [0.43921568628, 0.63921568628, 0.72941176471]
 custom_cmap = ListedColormap(c)
 ```
 
-<img src="q13.png">
+<img src="q13.png" width="500">
 
 ### Q14: What portion of Brown County is "Open Water"?
 
@@ -259,19 +268,20 @@ Include a comment discussing what the graph is showing you and what it means for
 
 You can search for "How can we interpret what features the model is relying on?" in the lecture examples:
 
-https://github.com/cs320-wisc/s22/blob/main/lec/29%20Regression%201/lec1.ipynb
+https://github.com/cs320-wisc/f22/tree/main/lec/29-regression1
 
 ## Part 2:
 
-2. Construct a least 2 regression models predicting POP100. They should differ in terms of (a) what columns they use and/or (b) whether or not they're preceded by transformers in an sklearn Pipeline
-3. perform cross validation on both your models over your training dataset
-4. Write a comment recommending which model you recommend for this prediction task. Factors you might consider are (a) high scores, (b) little variance across scores, (c) model simplicity, and (d) anything else you think is important.
-5. Fit your recommended model to the entire training dataset and score it against the test dataset
+1. Construct at least 2 regression models predicting POP100. They should differ in terms of (a) what columns they use and/or (b) whether or not they're preceded by transformers in an sklearn Pipeline
+2. Perform cross validation on both your models over your training dataset
+3. Write a comment recommending which model you recommend for this prediction task. Factors you might consider are (a) high scores, (b) little variance across scores, (c) model simplicity, and (d) anything else you think is important.
+4. Fit your recommended model to the entire training dataset and score it against the test dataset
 
 ### Q17: How does your recommended model score against the test dataset?
 
-Remember that you need to write a comment that reasonably justifies
-why you're recommending this specific model over the others you tried.
+This is just the number from step 4 above.  This cell is also a good
+place to have your comment from step 3 (or there will be a manual
+deduction).
 
 In terms of tester scores, this question is weighted to be worth 4
 regular questions.  Explained variance of 0.35 or higher gets full

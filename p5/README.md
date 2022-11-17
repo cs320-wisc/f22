@@ -3,6 +3,7 @@
 ## Corrections/Clarifications
 * Nov 15: Add an alternative plot for q15.
 * Nov 10: modified tester.py and module_tester.py to allow 2 different regex in Filing.state() from edgar_utils.py, and corresponding answers for Q9.
+* Nov 17: fixed lab link
 
 ## Overview
 
@@ -148,7 +149,7 @@ Only count the requests made by users who were identified as crawlers (see the c
 
 ## Part 2: creating `edgar_utils.py` module
 
-This part is to be started during the [weekly lab](../labs/lab11.md).
+This part is to be started during the [weekly lab](../labs/lab10.md).
 Finish the `edgar_utils.py` module now if you didn't have enough time
 during the scheduled lab.
 

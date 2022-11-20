@@ -518,7 +518,7 @@ def ab_test_helper(click_through=[], best=0):
     # phase 2: same
     for i in range(learn + 1, visits):
         if html[i] != html[i - 1]:
-            print("did not consistently show the same page after first %d visits" % learn)
+            print("did not consistently show the same page after A/B test")
             return points
         
     points += 1

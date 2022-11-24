@@ -5,6 +5,7 @@
 ## Corrections/Clarifications
 
 * Nov 16: updated link to lecture examples from this semester
+* Nov 23: clarified that x-axis is proportion of county in `Q15`
 
 ## Overview
 
@@ -236,7 +237,9 @@ land_use = {"open_water": 11,
 ### Q15: What is the Relationship Between POP100 and ________________?
 
 Replace the blank with a cell count for a land type of your choosing.
-Show a scatter plot where each point corresponds to a county.
+Show a scatter plot where each point corresponds to a county. Note that
+the x-axis is the *proportion* of that county that is listed as
+your selected land type.
 
 For example, the following shows the relation between pasture and
 population (you may NOT reuse pasture -- choose a different type for
